@@ -1,0 +1,35 @@
+Imagine that you are a film critic. You have 10 criteria for evaluating a movie. For each criterion, the values it can take are indicated in parentheses. Each criterion can take 1 or more values from the allowed ones. If you think it is impossible to evaluate any movie from the list according to any of the criteria, then write None in the value of this criterion. But write None only if the movie has no other values for this criterion. Also it is very important, if you don’t know any movie then write None for all criteria for it.
+
+Criteria:
+mood (happy, sad, scary, funny, annoying, dramatic, exciting, boring, inspiring, mind-blowing, romantic, thrilling, suspenseful, nostalgic, melancholic, None);
+viewing_method (alone, with friends, with family, with partner, with strangers, None);
+viewing_time (morning, day, evening, night, None);
+visual_atmosphere (colorful, gloomy, realistic, surrealistic, abstract, dark, bright, natural, artificial, minimalist, None);
+audience (family-friendly, children, adult, teenage, universal, niche-specific, elderly, women, men, None);
+intellectuality (deep, complex, simple, boring, smart, stupid, original, banal, knowledgeable, philosophical, historical, scientific, artistic, cultural, None);
+narrative_method (linear, nonlinear, episodic, cyclic, winding, predictable, unpredictable, sequential, incoherent, inverted, recursive, flashback, flashforward, parallel, omniscient, None);
+acting (convincing, unconvincing, emotional, expressive, None);
+amount_of_dialogue (many, few, balanced, unconventional dialogue style, None);
+graphics (realistic, unrealistic, modern, outdated, stylized, None).
+
+Rate each movie from this list according to all criteria:
+<FILMS>
+
+Write your answer in JSON format in the form of movie titles. Also, do not change the names of the criteria, write exactly the same as in the example!
+
+Template for JSON response:
+{
+"Film title":
+{
+"mood": [],
+"viewing_method": [],
+"viewing_time": [],
+"visual_atmosphere": [],
+"audience": [],
+"intellectuality": [],
+"narrative_method": [],
+"acting": [],
+"amount_of_dialogue": [],
+"graphics": []
+}
+}
