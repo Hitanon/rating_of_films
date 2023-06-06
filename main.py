@@ -9,7 +9,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--cnt_pages', type=int, default=10,
                         help='Number of pages to process')
-    args = parser.parse_a
+    args = parser.parse_args()
 
     CNT_PAGES = args.cnt_pages
 
