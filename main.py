@@ -9,7 +9,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--cnt_pages', type=int, default=10,
                         help='Number of pages to process')
-    args = parser.parse_args()
+    args = parser.parse_a
 
     CNT_PAGES = args.cnt_pages
 
@@ -17,7 +17,10 @@ if __name__ == '__main__':
     chat_gpt = ChatGPT("resources/prompt.txt")
 
     cnt_pages = film_searcher.page + CNT_PAGES
+    count_errors = 0
     while film_searcher.page < cnt_pages:
+        if count_errors >= 10:
+            break
         try:
             films = film_searcher.get_films()
         except Exception:
@@ -29,7 +32,9 @@ if __name__ == '__main__':
             response = chat_gpt.send_request()
         except Exception:
             print('Error with open-ai API')
-            break
+            time.sleep(60)
+            count_errors += 1
+            continue
         utils.add_ids(response, films)
         utils.replace_params_with_ids(response)
         utils.save_json(response)
