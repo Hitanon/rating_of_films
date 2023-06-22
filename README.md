@@ -5,7 +5,7 @@ A program for evaluating films using chatGPT according to specified criteria
 1) указать ключ от API Кинопоиска в /resources/api_key_kinopoisk.txt
 2) указать ключи от API openai в /resources/api_chat_gpt.txt (можно сразу несколько ключей по одному в строке)
 3) указать начальную страницу с которой будет приходить результат /resources/page.txt
-   (цифра в в одну строку, сейчас я на 6500+ странице, поэтому можно указывать 15000+)
+   (цифру в первую строку, сейчас я на 6500+ странице, поэтому можно указывать 15000+)
    
 Запуск:
 python main.py --cnt_pages <Количество страниц>
