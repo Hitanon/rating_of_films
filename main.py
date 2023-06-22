@@ -5,7 +5,6 @@ from chat_gpt import ChatGPT, load_api_key
 from film_searcher import FilmSearcher
 import utils.json_utils as utils
 
-
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
