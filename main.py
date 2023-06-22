@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     CNT_PAGES = args.cnt_pages
     number_api_key = 1
-    count_api_keys = 5
+    count_api_keys = len(open("resources/api_key_chat_gpt.txt").readlines())
     count_errors = 0
 
     film_searcher = FilmSearcher(20)
@@ -38,7 +38,7 @@ if __name__ == '__main__':
             print('Error with open-ai API')
             time.sleep(60)
             number_api_key += 1
-            number_api_key %= 5
+            number_api_key %= (count_api_keys+1)
             load_api_key(number_api_key)
             count_errors += 1
             continue
